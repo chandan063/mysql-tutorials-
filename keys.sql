@@ -62,6 +62,21 @@ INSERT INTO emp(id) VALUES (105);
 SELECT * FROM emp;
 /*  by default if any employee salary is missed then default value will  be stored  ====105 399==*/
 
+/* ===========check constraints===========*/
+-- IT CAN LIMIT THE VALUES ALLOWED IN A COLUMN
+CREATE TABLE city (
+ id INT PRIMARY KEY,
+ city VARCHAR (30),
+ age INT,
+ CONSTRAINTS age_check CHECK (age>=18 AND city="DELHI"
+ );
+
+
+CREATE TABLE newTab(
+ age INT CHECK(age>=18)
+ );
+
+
 
 
 
