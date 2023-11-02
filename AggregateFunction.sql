@@ -20,6 +20,8 @@ SELECT count(marks) FROM student;
 /*
 =============================GROUP BY CLAUSE================================
 Groups rows that have the same values into summary rows.
+
+
 It collect data from multiple records and groups the result by one or more column.
 
 Generally we use group by with some aggregate functions.
