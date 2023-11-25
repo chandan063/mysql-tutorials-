@@ -29,5 +29,48 @@ ON student.student_id=course.student_id;
 
 
 /* left join - give the data that are in left table and common data of
- ----------right table/ overlap */
+ ----------right table/ overlap 
+Returns all record form the left table,and the matched record from the right table
 
+SYNTAX
+*/
+SELECT COLUMN(S)
+FROM TABLE A
+LEFT JOIN TABLE B
+ON tableA.col_name=tableB.col_name;
+
+/* RIGHT JOIN - RETURNS ALL RECORDS FORM THE RIGHT TABLE, AND MATCHED RECORDS FROM THE
+LEFT TABLE;
+SYNTAX*/
+ SELECT COLUMN(S)
+FROM TABLE A
+RIGHT JOIN B
+ON tableA.student_id=tableB.student_id;
+
+SELECT * 
+FROM student as a
+RIGHT JOIN course b
+on a.student_id=b.student_id;
+
+/* FULL JOIN - RETURNS ALL RECORDS WHEN THERE IS MATCH IN EITHER LEFT OR RIGHT TABLE
+
+SYNTAX*/
+
+SELECT * FROM STUDENT AS A 
+LEFT JOIN COURSE AS B
+ON A.ID=B.ID
+UNION
+SELECT * FROM STUDENT AS A
+RIGHT JOIN COURSE AS B
+ON A.ID=B.ID;
+
+
+SELECT * 
+FROM student  as a
+LEFT JOIN course as b
+on a.student_id=b.student_id
+UNION
+SELECT * 
+FROM student as a
+RIGHT JOIN course b
+on a.student_id=b.student_id;
