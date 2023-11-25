@@ -1,0 +1,16 @@
+// joins in sql
+// Join is used to combine rows from two or more tables, based on a related column
+// between them.
+// Type of Join 1.Inner join    ====> outer join (2.left join 3.Right Join 4.Full Join)
+
+// Inner join are used to join the data which are common in both the tables
+
+// SYNTAX
+SELECT COLUMNS(S)
+FROM TABLEA
+INNER JOIN TABLEB
+ON TABLEA.COL_NAME=TABLEB.COL_NAME;
+
+
+// left join - give the data that are in left table and common data of
+// ----------right table/ overlap 
