@@ -74,3 +74,29 @@ SELECT *
 FROM student as a
 RIGHT JOIN course b
 on a.student_id=b.student_id;
+
+
+
+/* LEFT EXCLUSIVE JOIN AND RIGHT EXCLUSIVE JOIN 
+
+LEFT EXCLUSIVE SHOW DATA THAT ARE ONLY OF LEFT TABLE NOT COMMON TO ANY OTHER TABLE.
+RIGHT EXCLUSIVE IS VICEVERSA
+*/
+/* SYNTAX */
+SELECT * 
+FROM STUDENT AS A
+LEFT JOIN COURSE AS B
+ON A.ID=B.ID
+WHERE B.ID IS NULL;
+/*LEFT EXAMPLE */
+SELECT *
+FROM student as a
+LEFT JOIN course b
+ON a.student_id=b.student_id
+WHERE B.student_id IS NULL;
+/* RIGHT EXAMPLE */
+SELECT *
+FROM student as a
+RIGHT JOIN course b
+ON a.student_id=b.student_id
+WHERE a.student_id IS NULL;
